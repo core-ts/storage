@@ -1,0 +1,28 @@
+{
+  "name": "one-storage",
+  "version": "0.0.0",
+  "description": "storage",
+  "main": "./lib/index.js",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build:lib": "tsc",
+    "clean:lib": "rimraf lib"
+  },
+  "devDependencies": {
+    "@google-cloud/storage": "^5.8.5",
+    "tslint": "5.10.0",
+    "typescript": "^3.8.3"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/core-ts/storage"
+  },
+  "keywords": [
+    "storage",
+    "storage-one",
+    "one-storage"
+  ]
+}
