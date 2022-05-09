@@ -1,6 +1,6 @@
 {
   "name": "one-storage",
-  "version": "0.0.0",
+  "version": "0.1.1",
   "description": "storage",
   "main": "./lib/index.js",
   "types": "./src/index.ts",
@@ -9,7 +9,6 @@
     "clean:lib": "rimraf lib"
   },
   "devDependencies": {
-    "@google-cloud/storage": "^5.8.5",
     "tslint": "5.10.0",
     "typescript": "^3.8.3"
   },
