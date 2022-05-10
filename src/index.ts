@@ -117,16 +117,12 @@ export class StorageService<T, ID> {
     const galary: UploadInfo[] | undefined = user[this.model.gallery];
     await this.deleteFileUpload(oldUrl, galary, sizes ?? this.sizesCover);
     for (const [index, file] of data.entries()) {
-      // size
-      //
       const urlOrigin = await this.storage.upload(
         file.data,
         file.name,
         this.config.cover
       );
       const obj: any = {};
-
-
       if (index === 0) {
         obj[this.model.id] = id;
         obj[this.model.cover] = urlOrigin;
@@ -160,8 +156,6 @@ export class StorageService<T, ID> {
         this.config.image
       );
       const obj: any = {};
-
-
       if (index === 0) {
         obj[this.model.id] = id;
         obj[this.model.image] = urlOrigin;
