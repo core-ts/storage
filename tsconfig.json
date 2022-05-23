@@ -12,6 +12,7 @@
     "declaration": false,
     "experimentalDecorators": false,
     "removeComments": true,
+    "downlevelIteration": true,
     "lib": [
       "es5",
       "es6"
