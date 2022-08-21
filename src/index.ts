@@ -350,6 +350,15 @@ export interface Attribute {
 export interface Attributes {
   [key: string]: Attribute;
 }
+export const uploadModel: Attributes = {
+  type: {},
+  url: {
+    required: true,
+  },
+  source: {
+    required: true,
+  },
+};
 export interface GenericRepository<T, ID> {
   metadata?(): Attributes | undefined;
   keys?(): string[];
