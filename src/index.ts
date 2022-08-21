@@ -356,7 +356,6 @@ export const uploadModel: Attributes = {
     required: true,
   },
   source: {
-    required: true,
   },
 };
 export interface GenericRepository<T, ID> {
