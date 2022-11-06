@@ -101,9 +101,19 @@ export class StorageService<T, ID> {
     this.uploadImage = this.uploadImage.bind(this);
     this.addExternalResource = this.addExternalResource.bind(this);
     this.deleteExternalResource = this.deleteExternalResource.bind(this);
+    this.getGallery = this.getGallery.bind(this);
   }
   model: ModelConfig;
   config: StorageConfig;
+  async getGallery(id: ID): Promise<UploadInfo[]> {
+    return this.loadData(id).then((user) => {
+      if (user) {
+        return (user as any)[this.model.gallery];
+      }
+      return [];
+    });
+  }
+
   async uploadCoverImage(
     id: ID,
     data: UploadData[], sizes?: number[]
